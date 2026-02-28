@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=0" />
+    <title>MediCenter</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <script type="text/javascript">
+        window.onload = function () {
+            document.querySelector(".menuMobile").addEventListener("click", function () {
+                let menu = document.querySelector(".menu nav ul");
+                if (menu.style.display == 'flex') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'flex';
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="./image/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <div class="menuMobile">
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                    </div>
+                    <ul>
+                        <li class="active"><a href="">HOME</a></li>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="">SERVICES</a></li>
+                        <li><a href="">DEPARTMENTS</a></li>
+                        <li><a href="">DOCTORS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container column">
+            <div class="banner_headline">
+                <h1>Top notch experience</h1>
+                <h2>Medicenter is a responsive template perfect for all screen sizes</h2>
+            </div>
+            <div class="banner_options">
+                <div class="banner1">
+                    <div class="banner_title">Emergency Case</div>
+                    <div class="banner_desc">If you need a doctor urgently outside of medicenter opening hours, call emergency appointment number for emergency service</div>
+                    <a href="">Read more</a>
+                </div>
+                <div class="banner2">
+                    <div class="banner_title">Doctors Timetable</div>
+                    <div class="banner_desc">Here at medicenter we have individual doctor's lists. Click read more below to see services and current timetable for our doctors</div>
+                    <a href="">Read more</a>
+                </div>
+                <div class="banner3">
+                    <div class="banner_title">Opening Hours</div>
+                    <div class="days">
+                        Monday - Friday
+                        <div class="hours">8:00 - 17:00</div>
+                    </div>
+                    <div class="days">
+                        Saturday
+                        <div class="hours">9:30 - 17:30</div>
+                    </div>
+                    <div class="days">
+                        Sunday
+                        <div class="hours">9:30 - 15:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="geral">
+        <div class="container">
+            <section>
+                <div class="widget">
+                    <div class="widget_title">
+                        <div class="widget_title_text">Latest News</div>
+                        <div class="widget_title_bar"></div>
+                    </div>
+                    <div class="widget_body flex">
+                        <article>
+                            <a href="">
+                                <div class="news_data">
+                                    <div class="news_posted_at">12 DEC 12</div>
+                                    <div class="news_comments">2</div>
+                                </div>
+                                <div class="news_thumbnail">
+                                    <img src="./image/medico.jpg" />
+                                </div>
+                                <div class="news_title">Lorem ipsum dolor sit amat velum</div>
+                                <div class="news_resume">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="">
+                                <div class="news_data">
+                                    <div class="news_posted_at">12 DEC 12</div>
+                                    <div class="news_comments">2</div>
+                                </div>
+                                <div class="news_thumbnail">
+                                    <img src="./image/medico.jpg" />
+                                </div>
+                                <div class="news_title">Lorem ipsum dolor sit amat velum</div>
+                                <div class="news_resume">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="widget">
+                    <div class="widget_title">
+                        <div class="widget_title_text">Departments</div>
+                        <div class="widget_title_bar"></div>
+                    </div>
+                    <div class="widget_body">
+                        <div class="box">
+                            <div class="box1">
+                                <div></div><div></div><div></div>
+                            </div>
+                            <div class="box2">
+                                <div></div><div></div><div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget_title">
+                        <div class="widget_title_text">Make An Appointment</div>
+                        <div class="widget_title_bar"></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectotur adipiscing elit.</div>
+                        <div class="bar"></div>
+                        <div class="phone">Phone: +55 11932011590</div>
+                        <div class="bar"></div>
+                        <div class="email">Email: medicenter@mail.com</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container flexColumn">
+            <div class="footer_menu">
+                <div class="fm_1">
+                    <a href="">Medicenter Clinic<div class="texto">Here in medicenter we have individual</div></a>
+                </div>
+                <div class="fm_2">
+                    <a href="">Medical Records<div class="texto">Here in medicenter we have individual</div></a>
+                </div>
+                <div class="fm_3">
+                    <a href="">Online Bill<div class="texto">Here in medicenter we have individual</div></a>
+                </div>
+            </div>
+            <div class="footer_area">
+                <div class="footer_areaitem">
+                    <div class="widget">
+                        <div class="widget_title">
+                            <div class="widget_title_text">Medicenter Clinic</div>
+                            <div class="widget_title_bar"></div>
+                            <div class="txt">Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.</div>
+                            <div class="info">
+                                <div>18 Henrique Castro</div>
+                                <div>Keilor East</div>
+                                <div>VIC 3033, Australia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_areaitem">
+                    <div class="widget">
+                        <div class="widget_title">
+                            <div class="widget_title_text">Latest Posts</div>
+                            <div class="widget_title_bar"></div>
+                            <div class="link1">Mauris adipiscing mauris fringilla turpis.<br/><a href="">6 years ago</a></div>
+                            <div class="link1">Lorem ipsum dolor sit amat volum.<br/><a href="">6 years ago</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copy">Copyright - Todos os direitos reservados</div>
+        </div>
+    </footer>
+</body>
+</html>
