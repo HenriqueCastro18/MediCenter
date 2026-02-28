@@ -4,12 +4,6 @@ projeto desenvolvido para colocar em prática conceitos de desenvolvimento web f
 
 ---
 
-### 📱 demonstração visual
-
-
-
----
-
 ### 🛠 tecnologias utilizadas
 
 * **html5**: estruturação semântica de elementos.
@@ -39,3 +33,4 @@ cd medicenter
 
 # abrir o projeto no navegador (ou use a extensão live server no vscode)
 open index.html
+
