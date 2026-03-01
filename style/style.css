@@ -8,16 +8,24 @@ body {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     display: flex;
     justify-content: center;
     height: 120px;
+    width: 100%;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    width: 990px;
+    width: 100%;
+    max-width: 990px;
+    padding: 0 20px;
 }
 
 .logo {
@@ -44,6 +52,7 @@ nav a {
     text-transform: uppercase;
     color: #727272;
     font-weight: bold;
+    transition: all ease .3s;
 }
 
 nav .active a,
@@ -52,13 +61,15 @@ nav a:hover {
     color: #fff;
 }
 
+/* Banner Section */
 #banner {
     display: flex;
     justify-content: center;
-    background-image: url('./image/banner.jpg');
+    background-image: url('../image/banner.jpg');
     background-position: center;
     background-size: cover;
-    height: 600px;
+    min-height: 400px;
+    height: auto;
 }
 
 .column {
@@ -70,6 +81,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 40px 0;
 }
 
 .banner_headline h1 {
@@ -90,7 +102,7 @@ nav a:hover {
 
 .banner_options {
     display: flex;
-    height: 210px;
+    width: 100%;
 }
 
 .banner1, .banner2, .banner3 {
@@ -127,6 +139,7 @@ nav a:hover {
     padding: 10px 0;
 }
 
+/* Geral / News Section */
 #geral {
     display: flex;
     justify-content: center;
@@ -152,6 +165,56 @@ nav a:hover {
     margin-top: 6px;
 }
 
+/* --- SEÇÃO DE DEPARTAMENTOS (CORRIGIDA) --- */
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Adicionado espaço para a seção de baixo */
+}
+
+.box1, .box2 {
+    display: flex;
+    gap: 10px;
+}
+
+.box1 div, .box2 div {
+    flex: 1;
+    height: 80px;
+    background-color: #39aae1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.box1 div:hover, .box2 div:hover {
+    background-color: #2b4c99;
+}
+
+/* Inserindo nomes nos departamentos */
+.box1 div:nth-child(1)::after { content: "Cardiology"; }
+.box1 div:nth-child(2)::after { content: "Neurology"; }
+.box1 div:nth-child(3)::after { content: "Pediatry"; }
+
+.box2 div:nth-child(1)::after { content: "Urology"; }
+.box2 div:nth-child(2)::after { content: "Dental"; }
+.box2 div:nth-child(3)::after { content: "Orthopedy"; }
+
+/* --- SEÇÃO MAKE AN APPOINTMENT (CORRIGIDA) --- */
+.widget .text { font-size: 14px; color: #5c5c5c; margin: 15px 0; line-height: 20px; }
+.widget .bar { height: 1px; background-color: #EEE; margin: 10px 0; }
+.widget .phone, .widget .email { font-size: 14px; font-weight: bold; color: #333; padding: 10px 0; }
+
+/* Resto do Layout */
 .flex { display: flex; flex-wrap: wrap; }
 
 article {
@@ -199,6 +262,7 @@ article .news_resume {
     line-height: 20px;
 }
 
+/* Footer */
 footer {
     background-color: #1e1e1e;
     display: flex;
@@ -222,6 +286,11 @@ footer {
     font-size: 20px;
 }
 
+.footer_menu .texto {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
 .footer_area { display: flex; margin-top: 40px; }
 .footer_areaitem { flex: 1; color: #fff; margin-right: 20px; }
 
@@ -233,37 +302,50 @@ footer {
     font-size: 12px;
     padding: 20px 0;
     margin-top: 40px;
+    text-align: center;
 }
 
+/* Menu Mobile */
 .menuMobile {
     display: none;
     width: 40px;
-    height: 40px;
+    height: 30px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     cursor: pointer;
 }
 
 .mm_line { height: 3px; background-color: #39aae1; width: 100%; }
 
+/* --- MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .banner_headline h1 { font-size: 50px; }
+    #geral .container { flex-direction: column; }
+    #geral aside { padding-left: 0; margin-top: 30px; }
+}
+
 @media (max-width: 700px) {
-    .container { width: 100%; padding: 0 20px; }
-    header .container { flex-direction: row; align-items: center; }
+    header { height: 100px; }
+    header .container { flex-direction: row; align-items: center; justify-content: space-between; }
     nav ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 120px;
+        top: 100px;
         left: 0;
         width: 100%;
         background-color: #fff;
         z-index: 99;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
     }
+    nav ul li { border-bottom: 1px solid #eee; }
     .menuMobile { display: flex; }
-    .banner_options, .footer_menu, .footer_area, #geral .container {
-        flex-direction: column;
-    }
-    #banner { height: auto; }
-    .banner_headline h1 { font-size: 40px; }
-    #geral aside { padding-left: 0; margin-top: 30px; }
+    .banner_options { flex-direction: column; }
+    .banner_headline h1 { font-size: 35px; }
+    .banner_headline h2 { font-size: 18px; }
+    .footer_menu { flex-direction: column; }
+    .footer_area { flex-direction: column; }
+    .footer_areaitem { margin-bottom: 30px; margin-right: 0; }
+    #geral section { width: 100%; }
+    article { margin-right: 0; }
 }
